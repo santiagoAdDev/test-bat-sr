@@ -1,0 +1,4 @@
+function() {
+  var link = document.getElementById('navbarTogglerDemo02').getElementsByTagName('div');
+  return link.getAttribute("href");
+}
