@@ -1,0 +1,32 @@
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementByClassName("sigin-form").addEventListener('submit', validarVacio); 
+});
+
+
+function validarVacio(valor) {
+        valor = valor.replace("&nbsp;", "");
+        valor = valor == undefined ? "" : valor;
+        if (!valor || 0 === valor.trim().length) {
+            return true;
+            }
+        else {
+            return false;
+            }
+        }
+
+    function validarfor(){
+    
+    var w3lName = document.getElementById("w3lName").value; 
+    var w3lSubject = document.getElementsByName("w3lSubject")[0].value;
+    var w3lSender = document.getElementsByName("w3lSender")[0].value;
+    var w3lPhone = document.getElementsByName("w3lPhone")[0].value;
+    
+    var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    
+    
+    if ( validarVacio(w3lName.value) || validarVacio(w3lSubject.value) || validarVacio(w3lSender.value) || validarVacio(w3lPhone.value)) {  //COMPRUEBA CAMPOS VACIOS
+        alert("Los campos no pueden quedar vacios");
+        return false;
+    }
+    return true;
+    }
