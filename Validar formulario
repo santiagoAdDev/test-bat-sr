@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementByClassName("sigin-form").addEventListener('submit', validarVacio); 
+  document.getElementByClassName("signin-form").addEventListener('submit', validarVacio); 
 });
 
 
@@ -20,10 +20,7 @@ function validarVacio(valor) {
     var w3lSubject = document.getElementsByName("w3lSubject")[0].value;
     var w3lSender = document.getElementsByName("w3lSender")[0].value;
     var w3lPhone = document.getElementsByName("w3lPhone")[0].value;
-    
-    var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    
-    
+       
     if ( validarVacio(w3lName.value) || validarVacio(w3lSubject.value) || validarVacio(w3lSender.value) || validarVacio(w3lPhone.value)) {  //COMPRUEBA CAMPOS VACIOS
         alert("Los campos no pueden quedar vacios");
         return false;
